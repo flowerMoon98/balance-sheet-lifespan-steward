@@ -1,22 +1,28 @@
 
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Approach } from "@/components/Approach";
-import { Benefits } from "@/components/Benefits";
-import { Services } from "@/components/Services";
+import { EthosNote } from "@/components/EthosNote";
+import { GateStory } from "@/components/GateStory";
+import { AlignmentSnapshot } from "@/components/AlignmentSnapshot";
+import { FundsOverview } from "@/components/FundsOverview";
+import { WindowsOfStewardship } from "@/components/WindowsOfStewardship";
+import { InsightTeaser } from "@/components/InsightTeaser";
+import { InvitationRibbon } from "@/components/InvitationRibbon";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
       <main id="main-content">
         <Hero />
-        <Approach />
-        <Benefits />
-        <Services />
+        <EthosNote />
+        <GateStory />
+        <AlignmentSnapshot />
+        <FundsOverview />
+        <WindowsOfStewardship />
+        <InsightTeaser />
+        <InvitationRibbon />
       </main>
       <Footer />
     </>

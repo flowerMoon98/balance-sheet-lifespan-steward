@@ -1,3 +1,4 @@
+
 /* Preload fonts */
 @font-face {
   font-family: 'Nib Pro';
@@ -30,6 +31,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  
+  [data-motion-disable] {
+    transform: none !important;
   }
 }
 
@@ -143,6 +148,61 @@
 
 @layer base {
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Arbeit', 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nib Pro', serif;
+    line-height: 1.2;
+  }
+  
+  /* WCAG Focus Styles */
+  :focus-visible {
+    outline: 2px solid #D6F27E;
+    outline-offset: 2px;
+  }
+}
+
+/* Animation for hover links */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Section padding responsive utilities */
+.py-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .py-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .py-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
