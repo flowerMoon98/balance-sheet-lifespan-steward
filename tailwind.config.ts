@@ -36,6 +36,9 @@ export default {
         clay: '#745849',
         sky: '#0D7EA2',
         grass: '#047251',
+        // Neutral
+        'grey-light': '#E6E6E6',
+        'grey-lighter': '#F8F8F8',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
