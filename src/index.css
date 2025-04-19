@@ -1,3 +1,38 @@
+/* Preload fonts */
+@font-face {
+  font-family: 'Nib Pro';
+  src: url('/fonts/NibPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arbeit';
+  src: url('/fonts/Arbeit-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Critical CSS */
+@layer critical {
+  .font-nib {
+    font-family: 'Nib Pro', serif;
+  }
+  .font-arbeit {
+    font-family: 'Arbeit', sans-serif;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
